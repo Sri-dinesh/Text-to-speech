@@ -3,17 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
-    <title>Text to Speech</title>
+    <title>Voice Engine</title>
   </head>
   <body>
-    <div class="hero">
-      <h1>Text To Speech <span> Converter!</span></h1>
-      <textarea placeholder="Enter your text here..."></textarea>
-      <div class="row">
-        <select></select>
-        <button><img src="images/play.png" alt="play_image" />Listen</button>
-      </div>
+    <div class="app-container">
+      <header class="app-header">
+        <div class="logo">VOICE<span>ENGINE</span></div>
+        <div class="status-indicator"></div>
+      </header>
+      <main class="app-main">
+        <div class="editor-section">
+          <textarea placeholder="Type something to synthesize..."></textarea>
+        </div>
+        <div class="control-section">
+          <div class="input-group">
+            <label>Voice Model</label>
+            <div class="select-wrapper">
+              <select></select>
+            </div>
+          </div>
+          <button class="play-btn">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 6L17 12L7 18V6Z" fill="currentColor" />
+            </svg>
+            <span>Generate Speech</span>
+          </button>
+        </div>
+      </main>
     </div>
     <script src="script.js"></script>
   </body>
